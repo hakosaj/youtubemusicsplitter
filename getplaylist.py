@@ -1,9 +1,9 @@
 import requests
 import json
 
-
-
-api_key="AIzaSyD3N-uz2LstKLA3MzCw84HcA2aJovewr4s"
+#Api key
+with open("ytapi.pub","r") as apifile:
+    api_key=apifile.read()
 hyvia_playlist="PLouI7YeilwCv69IHhIIIUzZjfowPnMa4Y"
 fucc_playlist="PLouI7YeilwCvy2PR9T5zuP8lwml-c1p29"
 

@@ -1,7 +1,7 @@
 import psycopg
 
 # Connect to an existing database
-with psycopg.connect("dbname=youtubesplitter user=hakosaj password=Hyperactivehumorist!!") as conn:
+with psycopg.connect("dbname=youtubesplitter user=hakosaj password=SECRET!) as conn:
 
     # Open a cursor to perform database operations
     with conn.cursor() as cur:

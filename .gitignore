@@ -1,3 +1,4 @@
 *.pub
 *.ini
 video_downloads/*
+wav_files/*

@@ -37,3 +37,6 @@ spectrals=np.array(spectrals)
 print(spectrals.shape)
 with open('spectrals.pickle', 'wb') as file:
     pickle.dump(spectrals,file)
+
+
+    

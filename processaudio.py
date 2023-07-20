@@ -1,17 +1,17 @@
 import librosa
 import numpy as np
 
-y,sr = librosa.load("wav_files/doiwannaknow.wav",sr=100)
+dr=librosa.get_duration(filename="wav_files/afterglow.wav")
+y,sr = librosa.load("wav_files/afterglow.wav",sr=10000/dr)
+
 
 
 #Around 26k  points of sampled time serie data
 print(f"Sampling data: {y.shape}")
 #Sample rate, ere 100
-print(sr)
-
+print(f"Sample rate: {sr}")
 mfccs = librosa.feature.mfcc(y=y, sr=sr)
 
-print(type(mfccs))
 print(mfccs.shape)
 
 mfccs_mean = np.mean(mfccs, axis=0)

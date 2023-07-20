@@ -12,17 +12,18 @@ def get_file():
     with open(f"cleaned_{playlist_name}_pl.json",'r') as jsonfile:
         playlist_json=json.load(jsonfile)
 
-    k1=list(playlist_json.keys())[0]
-    first_data=playlist_json[k1]
-    vid_url=f'https://www.youtube.com/watch?v={first_data["video_id"]}'
-    selected_video = YouTube(vid_url)
-    #print(dir(selected_video))
+    for item in list(playlist_json.keys()):
+        print(item)
+        first_data=playlist_json[item]
+        vid_url=f'https://www.youtube.com/watch?v={first_data["video_id"]}'
+        selected_video = YouTube(vid_url)
+        #print(dir(selected_video))
 
-    audio_stream=selected_video.streams.filter(only_audio=True,file_extension="mp4").first()
-    audio_stream.download()
-    print('Download Completed!')
+        audio_stream=selected_video.streams.filter(only_audio=True,file_extension="mp4").first()
+        audio_stream.download(output_path="video_downloads/")
+        print('Download Completed!')
 
-    print(audio_stream.title)
+        print(audio_stream.title)
 
 def convert_file(title="Do I Wanna Know.mp4"):
 
@@ -35,4 +36,5 @@ def convert_file(title="Do I Wanna Know.mp4"):
 
 
 if __name__=="__main__":
-    convert_file()
+    #convert_file()
+    get_file()

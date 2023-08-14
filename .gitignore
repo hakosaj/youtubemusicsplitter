@@ -1,4 +1,26 @@
+#Specific to the downloads
 *.pub
 *.ini
 video_downloads/*
 wav_files/*
+
+# React-specific
+/node_modules/
+/build/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Django-specific
+__pycache__/
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+
+# General
+.DS_Store
+.idea/
+*.log
+.vscode/

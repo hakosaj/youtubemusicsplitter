@@ -3,6 +3,8 @@
 *.ini
 video_downloads/*
 wav_files/*
+*.mp4
+*.wav
 
 # React-specific
 /node_modules/
